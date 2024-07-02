@@ -1,0 +1,109 @@
+Q1. What is FastAPI and what are its main features?
+
+Ans: FastAPI is a modern , fast web framework for building APIs with python. It is designed to be easy to use and highly efficient , leveraging the capabilities of asynchronous programming to handle high concurrency.
+
+Main Features of FastAPI:
+
+1. High Performance 
+2. Asynchronous capabilities 
+3. Automatic interactive API Documentation
+4. Standards-based
+5. Dependency injection
+6. Data Validation
+7. Security
+
+Q2. How do you install FastAPI?
+
+Ans: To install FastAPI , you will need to use 'pip', which is the package installer for Python . You will also need an ASGI server to serve your application.
+
+1. Install Python: Ensure that python is installed in your system. 
+
+2. Create a virtual environment : python -m venv fastapi-env
+
+3. activate the virtual envieonment: fastapi-env\Scripts\activate
+
+4. install fastapi and Uvicorn
+  
+    *pip install fastapi
+    *pip install uvicorn
+5. create a fastapi application
+ 
+   from fastapi import FastAPI
+   app = FastAPI()
+   def read_root():
+   return {"Hello world"}
+6. Run the application
+   *uvicorn main:app --reload
+
+Q3. What makes FastAPI different from other Python web frameworks?
+
+Ans: FastAPI stands out from other python web frameworks due to several key features and designes principles:
+
+1. Asynchronous support
+2. Performance
+3. Automatic  Interactive API Documentation
+4. Dependency Injection
+5. Minimal code and Boilerplate
+6. Security
+7. Ease of use and learning curve
+8. community and ecosystem
+
+Q4.What is asynchronous programming, and how does FastAPI utilize it?
+
+Ans: Asynchronous programming is a method of programming that allows a programmer to perform tasks without waiting for other tasks to complete. This is particularly useful for I/O- bound operations like networks request.
+
+how does FastAPI utilize it?
+
+FastAPI is built on top of starlette , which is an ASGI (Asynchronous server gateway interface) framework. ASGI is designed to handle asynchronous tasks and making it a perfect match for FastAPI high-performance , modern API development goals.
+
+Here's how FastAPI leverages Asynchronous Programming:
+
+1. Async Endpoints
+2. concurrency and performance 
+3. Non-blocking middleware and dependencies
+4. Third-party Libraries
+5. Event loop integration
+
+Q5.How do you create a FastAPI application?
+
+Ans : Creating a FastAPI application involves a series of steps, from setting up your environment to writing and running your first endpoints. 
+
+1. set up your environment
+2. install fastapi and uvicorn
+3. create a simple fastAPI Application
+4. Run the FastAPI Application
+5. Access the API
+
+Q6. Explain the concept of path parameters and query parameters in FastAPI ?
+
+Ans :in FastAPI . path parameters and query parameters are two common ways to pass data to your API endpoints. 
+
+Path Parameters: Path Parameters are used to capture specific of the URL. They are defined as part of the path in the endpoint's URL and are typically used to identify resources.
+
+Query Parameters: Query Parameters are used to filter or sort resources. They are appended to the URL after a '?' and are typically used to provide optional parameters.
+
+Query Parameter Validation:
+
+You can also add validation and metadata to query parameters using 'query'.
+
+Q7. What are request and response models in FastAPI? How are they defined?
+
+Ans: In FastAPI, request and response models are used to define the structure of incoming requests and outgoing responses, respectively. These models help ensure that the data being sent to and received from your API endpoints adheres to a specific schema, making it easier to handle and validate.
+
+Here's a brief overview of how request and response models are defined in FastAPI:
+
+1.Request Models:
+Request models define the structure of the data that the API expects to receive in incoming requests. These models are typically used for request bodies (e.g., JSON payloads) or query parameters. Request models are created using Pydantic models, which are based on Python 3's type annotations. Pydantic models allow you to specify the expected data types, required fields, default values, and more.
+
+2. Response Models:
+Response models define the structure of the data that the API will return in its responses. These models specify the format and data types of the JSON objects returned by the API endpoints. Like request models, response models are also defined using Pydantic models.
+
+Q8. How do you define route operations in FastAPI?
+
+Ans: In FastAPI, route operations are defined using Python functions decorated with specific decorators provided by FastAPI. These decorators allow you to define the HTTP method (GET, POST, PUT, DELETE, etc.) supported by the route and specify the URL path at which the endpoint will be accessible. Additionally, you can specify additional parameters such as request body, query parameters, path parameters, and response models.
+
+Q9. What is dependency injection in FastAPI? How is it used?
+
+Ans: Dependency injection in FastAPI is a mechanism that allows you to define reusable components (dependencies) that can be injected into your route operations or other dependencies. This pattern promotes modular and maintainable code by decoupling components and promoting code reusability.
+
+In FastAPI, dependencies are Python callables (functions, methods, or classes) that are decorated with Depends. These dependencies can be used to perform tasks such as authentication, database connections, input validation, etc.
