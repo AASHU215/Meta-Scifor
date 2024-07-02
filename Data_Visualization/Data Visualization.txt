@@ -1,0 +1,131 @@
+Q1. What is NumPy and what are its main features?
+
+Ans: NumPy is a powerful library in python used for numerical and scientific computing. It provides support for large , multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays efficiently. 
+
+Here are the main features :
+
+1. N-dimensional array object (ndarray)
+2. Mathematical functions
+3. Broadcasting
+4. Vectorization
+5. Linear Algebra
+6. Random Number Generation
+7. File I/O
+
+Q2. Explain the difference between a Python list and a NumPy array?
+
+Ans: Python list and NumPy arrays are both used to store collections of items, but they have significant differences in terms of functionality, performance and usage:
+
+Python list:
+1. Dynamic and Heterogeneous: Python list can hold items of different data types
+2. Performance: Operations on lists can be slower compared to NumPy arrays because lists are not optimized for numerical computations.
+3. Flexibility: Lists are versatile and can contain complex structures , including other lists (nested)
+4. Built-in Functions: Lists rely on Python's built-in functions and methods for manipulation, such as append(), extend(), and pop()
+
+NumPy Array:
+1. Homogenous: NumPy arrays require all elements to be of the same data types , which allows for more efficient memory usage and computation
+2. Performance: NumPy arrays are optimized for numerical and scientific computing , providing significant performance advantages, especially for large datasets.
+3. Fixed size : Once created. the size of a NumPy array is fixed. To resize, a new array must be created.
+4. Advanced Mathematical Functions: Supports broadcasting , which allows arithmetic operations on arrays of different shapes.
+5. Integration: NumPy arrays integrate well with other libraries used in scientific computing, like SciPy , pandas , and Scikit-learn.
+6. Memory efficiency: NumPy arrays are stored in contiguous memory blocks , leading to more efficient memory access and better performance , especially for large datasets.
+
+Q3. How do you create a NumPy array?
+
+Ans: Creating a NumPy array can be done in several ways , depending on your requirements . 
+
+Here are some common methods:
+
+1. From a Python list
+2. Using 'np.ar ange()'
+3. Using 'np.linspace()'
+4. Using 'np.ones()'
+5. Using 'np.eye()'
+6. Using 'np.random()' Functions
+
+Q4. What is the purpose of broadcasting in NumPy?
+
+Ans: Broadcasting in NumPy is a powerful mechanism that allows NumPy to perform element-wise operations on arrays of different shapes without needing to explicitly reshape them. The purpose of broadcasting is to make array operations more efficient and concise , enabling you to write more intuitive and readable code .
+
+Key Points of broadcasting:
+
+1. Element-wise Operations
+2. Memory Efficient 
+3. Code Simplicity
+
+Why broadcasting is Useful :
+
+1. Efficiency 
+2. Conciseness
+3. Flexibility
+
+Q5. How do you perform element-wise operations in NumPy?
+
+Ans: Element-wise operations in NumPy are operations that are applied to corresponding elements of arrays. NumPy supports a wide range of element-wise operations, including arithmetic operations, comparisons, mathematical functions, and more. Here's how you can perform these operations:
+
+1. Arithmetic Operations
+2. Comparison Operations
+3. Mathematical Functions
+4. Logical Operations
+5. Broadcasting
+
+Q6. Explain the difference between np.zeros, np.ones, and np.empty functions in NumPy?
+
+Ans: In NumPy, np.zeros, np.ones, and np.empty are functions used to create arrays initialized with specific values. Here’s a detailed explanation of each:
+
+np.zeros:
+Purpose: Creates an array filled with zeros.
+shape: The shape of the array (e.g., (3, 4) creates a 3x4 array).
+dtype: The desired data type of the array elements (default is float).
+order: The memory layout order. 'C' is row-major (C-style) and 'F' is column-major (Fortran-style).
+
+np.ones
+Purpose:Creates an array filled with ones.
+shape: The shape of the array (e.g., (3, 4) creates a 3x4 array).
+dtype: The desired data type of the array elements (default is float).
+order: The memory layout order. 'C' is row-major (C-style) and 'F' is column-major (Fortran-style).
+
+np.empty
+Purpose: Creates an array without initializing the entries. The values in the array are whatever happens to be in the allocated memory, so they can be random.
+shape: The shape of the array (e.g., (3, 4) creates a 3x4 array).
+dtype: The desired data type of the array elements (default is float).
+order: The memory layout order. 'C' is row-major (C-style) and 'F' is column-major (Fortran-style).
+
+Q7.Describe the difference between slicing and indexing in NumPy arrays?
+
+Ans: In NumPy, slicing and indexing are two techniques used to access and manipulate elements within an array. While both are fundamental operations, they serve different purposes and have distinct behaviors. Here's a detailed explanation of the differences between slicing and indexing in NumPy arrays:
+
+Indexing
+Purpose: Indexing is used to access individual elements or specific locations within an array.
+
+Usage:
+For 1D arrays, a single index is used.
+For multi-dimensional arrays, a tuple of indices is used.
+
+Slicing
+Purpose:
+Slicing is used to access a range of elements within an array, returning a subarray.
+
+Usage:
+
+Slicing uses the colon : operator.
+The format is start: stop: step.
+For multi-dimensional arrays, slices for each dimension are separated by commas.
+
+Q8. How do you perform matrix multiplication using NumPy?
+
+Ans: Matrix multiplication in NumPy can be performed using several different methods. Here's a detailed guide on how to do it:
+
+1. Using the @ Operator
+The @ operator is the most concise way to perform matrix multiplication.
+2. Using the dot Function: The np.dot function is a versatile function that can perform both dot product for 1D arrays and matrix multiplication for 2D arrays.
+3. Using the matmul Function: The np.matmul function is specifically designed for matrix multiplication and can handle higher-dimensional arrays.
+
+Q9. What is the purpose of the np.random module in NumP
+
+Ans: The np.random module in NumPy provides functions for generating random numbers, random samples, and random distributions. It's a powerful tool for various applications, including simulations, statistical analysis, and machine learning. Here are some of the key purposes and functionalities of the np.random module:
+
+ Generating Random Numbers
+Uniform Random Numbers: np.random.rand and np.random.random generate random numbers from a uniform distribution over the interval [0, 1).
+
+
