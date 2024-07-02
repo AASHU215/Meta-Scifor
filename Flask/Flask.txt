@@ -1,0 +1,135 @@
+Q1. What is Flask and what are its main features?
+
+Ans: Flask is a micro web framework written in python, known for its simplicity, flexibility, and ease of use . It is designed to make getting started with web development quick and easy , while also allowing for scalability and the addition of more complex features.
+
+MAIN FEATURES OF FLASK:
+
+1. Lightweight and modular
+2. Flexible and Easy to Use 
+3. Minimalistic
+4. Built-in Development Server
+5. RESTful Request Handling
+6. Integrated Unit Testing Support
+7. Extensive Documentation
+8. Extensible
+
+Q2. How do you install Flask?
+
+Ans: To install Flask , You need to have python installed on Your system. Once Python is installed you can check the package manager 'pip' to install flask.
+
+1. check python installation:
+   
+    >python --version
+
+2. install flask using pip
+
+   >pip install flask
+
+3. verify the installation
+
+   > pip show flask
+
+Q3. What are some advantages of using Flask for web development?
+
+Ans: Flask offers several advantages for web development , making it a popular choice among developers for various types of projects:
+
+1. Simplicity and Ease of Use 
+2. Lightweight and minimalistic
+3. Flexibility
+4. Extensibility
+5. Integrated Development server
+6. Modularity
+7. community and Ecosystem
+
+Q4.Explain the concept of routing in Flask.
+
+Ans: Routing in flask is the process of mapping URLs to functions in your application. each URL corresponds to a particular view function that handles the logic for the endpoint.
+
+KEY CONCEPTS IN FLASK ROUTING:
+
+1. Routes
+2. Route Decorator
+
+Q5. How do you create a basic Flask application?
+
+Ans:  Creating a basic flask application involves several steps:
+
+STEP 1: install flask
+
+      >pip install Flask
+
+STEP 2 :Set Up the Project Directory
+
+      > cd myflaskapp
+
+STEP 3: Create the flask application
+   
+       from flask import Flask
+       app = Flask(__name__)
+       
+       def home():
+          return 'Hello World'
+
+       if __name__=='__main__':
+       app.run(debug=True)
+
+STEP 4: Run the application
+       
+       >python app.py
+
+Q6. What is the purpose of the route() decorator in Flask?
+
+Ans: route() decorator is used to bind a function to a specific URL pattern. This means that when a user visits the specified URL in their web browser, Flask will execute the corresponding function and return its response to the user. This mechanism is a fundamental part of how web frameworks map URLs to code that handles requests.
+
+Purpose
+1. URL Mapping: The primary purpose of the route() decorator is to map a URL to a view function. When a user navigates to a specific URL, Flask determines which function should handle the request based on the route specified.
+
+2. Routing: It defines how different URLs are routed to different functions in your application. Each URL pattern corresponds to a different piece of logic, allowing you to build complex web applications with multiple endpoints.
+
+3. HTTP Methods: The route() decorator can specify which HTTP methods (e.g., GET, POST, PUT, DELETE) the route should respond to. This allows you to define different behaviors for different methods on the same URL.
+
+Q7. How do you handle HTTP methods like GET and POST in Flask?
+
+Ans: In Flask, handling different HTTP methods like GET and POST is straightforward. You can specify which methods a route should accept by using the methods parameter in the route() decorator. Here's how you can do it:
+
+Handling GET and POST Requests
+To handle GET and POST requests, you need to:
+
+1. Import the necessary functions from Flask.
+2. Define routes with the methods parameter specifying the HTTP methods you want to handle.
+3. Use request. method within the route function to differentiate the logic for each method if both are handled within a single function.
+
+Q8. What is a Flask blueprint and how is it used?
+
+Ans: In Flask, a blueprint is a way to organize your application into modular components. Blueprints allow you to break your application into smaller, reusable units, making it easier to manage, especially as your application grows. Each blueprint can define its own routes, templates, static files, and other resources, which can then be registered on the main application.
+
+Purpose of Blueprints
+1.Modularity: Blueprints help you divide your application into distinct sections, each with its own routes and resources.
+2.Reusability: You can reuse blueprints across different projects or multiple instances within the same project.
+3.Organization: They help keep the codebase organized and easier to maintain by grouping related functionality together.
+
+Q9. How do you render templates in Flask?
+
+Ans: In Flask, rendering templates is a core feature that allows you to dynamically generate HTML content. Flask uses the Jinja2 template engine to render templates. Here's how you can render templates in Flask:
+
+Steps to Render Templates in Flask
+1. Set Up Your Flask Application: Create a basic Flask application.
+2. Create Templates: Create HTML template files in a templates directory.
+3. Render Templates: Use the render_template function to render these templates in your routes.
+
+Q10. What is Jinja2 and how does Flask use it for template rendering?
+How do you handle
+
+Ans: Jinja2 is a modern and designer-friendly templating engine for Python programming language. It is widely used in web development frameworks like Flask and Django for generating dynamic content in web applications. Flask uses Jinja2 as its default templating engine.
+
+Features of Jinja2:
+1.Template Inheritance: Allows you to create a base template with common elements and extend it in other templates, overriding specific blocks as needed.
+2.Control Structures: Provides control structures like loops, conditionals, and filters for manipulating data within templates.
+
+How Flask Uses Jinja2 for Template Rendering:
+
+1. Configuration: Flask automatically configures Jinja2 as the template engine when you create a Flask application.
+
+2. Template Loading: Flask looks for templates in the templates directory by default. You can override this behavior by specifying a different template directory.
+
+3. Rendering Templates: In your Flask routes, you use the render_template function to render Jinja2 templates. You pass data to the template as keyword arguments to render_template.
